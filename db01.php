@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola SQL</title>
+</head>
+<body>
+    <?php
+        $con = mysqli_connect("db", "root", "root_password", "prueba");
+
+        if (mysqli_connect_errno()) {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+
+        mysqli_close($con);
+    ?>
+</body>
+</html>
