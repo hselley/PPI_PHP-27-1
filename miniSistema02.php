@@ -16,10 +16,13 @@
         <div class="container-fluid">
             <ul class="navbar-nav">
             <li class="nav-item">
+                <a class="nav-link active" href="miniSistema04.html">Iniciar sesión</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link active" href="miniSistema01.html">Registro</a>
             </li>
             <li class="nav-item">
-                <a   class="nav-link" href="miniSistema03.html">Consulta</a>
+                <a   class="nav-link" href="miniSistema03.php">Consulta</a>
             </li>
             </ul>
         </div>
@@ -41,7 +44,7 @@
             $sql = "INSERT INTO usuarios (nombre, apellido, edad, correo, contrasena) 
                 VALUES ('$nombre', '$apellido', '$edad', '$correo', '$contraCifrada');";
 
-            if(!mysqli_query($con, $sql)) {
+            if(!mysqli_query($con, $sql)) { 
                 die('Error: ' . mysqli_error($con));
             } else {
                 echo "<p>Se ha registrado correctamente.</p>";
